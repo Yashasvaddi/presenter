@@ -41,7 +41,7 @@ while True:
             if butx1<index_x<butx2 and buty1<index_y<buty2:
                 cv2.destroyWindow("Frame")
                 while True:
-                    add=f"presenter\\pics\\meme{i}.jpg"
+                    add=f"presenter\\pics\\img{i}.jpg"
                     Disp=cv2.imread(add)
                     temp,window=cap.read()
                     window=cv2.flip(window,1)
@@ -58,7 +58,7 @@ while True:
                             index_y=int(index_tip.y*h)
                             #mp_drawing.draw_landmarks(window,multi_hand_landmarks,mp_hands.HAND_CONNECTIONS)
                     if cv2.waitKey(1)==ord('m') or option_flag:
-                        add=f"presenter\\pics\\meme{i}.jpg"
+                        add=f"presenter\\pics\\img{i}.jpg"
                         Disp=cv2.imread(add)
                         dist=m.sqrt((index_x-thumb_x)**2+(index_y-thumb_y)**2)
                         if dist<30:
@@ -112,7 +112,7 @@ while True:
                         else:
                             flag=True
                             cv2.line(window,(thumb_x,thumb_y),(index_x,index_y),(255,0,0),1)
-                        add=f"presenter\\pics\\meme{i}.jpg"
+                        add=f"presenter\\pics\\img{i}.jpg"
                         Disp=cv2.imread(add)
                         cv2.namedWindow("Window",cv2.WINDOW_NORMAL)
                         cv2.imshow("Window",window)
