@@ -149,12 +149,12 @@ while True:
                                 bpoints_timestamps[blue_index].appendleft(current_time)
                             
                             # Draw all current strokes
-                            for stroke_idx in range(len(bpoints)):
-                                if len(bpoints[stroke_idx]) >= 1:
-                                    stroke_points = list(bpoints[stroke_idx])
-                                    for k in range(1, len(stroke_points)):
-                                        if stroke_points[k - 1] and stroke_points[k]:
-                                            cv2.line(Disp, stroke_points[k - 1], stroke_points[k], (0, 0, 255), 3)
+                            # for stroke_idx in range(len(bpoints)):
+                            #     if len(bpoints[stroke_idx]) >= 1:
+                            #         stroke_points = list(bpoints[stroke_idx])
+                            #         for k in range(1, len(stroke_points)):
+                            #             if stroke_points[k - 1] and stroke_points[k]:
+                            #                 cv2.line(Disp, stroke_points[k - 1], stroke_points[k], (0, 0, 255), 3)
                     if cv2.waitKey(1) == ord('m') or option_flag:
                         if os.path.exists(add):
                             Disp = cv2.imread(add)
@@ -245,12 +245,12 @@ while True:
                             Disp = create_placeholder_image(i)
                         
                         # Redraw all current strokes on the display
-                        for stroke_idx in range(len(bpoints)):
-                            if len(bpoints[stroke_idx]) >= 1:
-                                stroke_points = list(bpoints[stroke_idx])
-                                for k in range(1, len(stroke_points)):
-                                    if stroke_points[k - 1] and stroke_points[k]:
-                                        cv2.line(Disp, stroke_points[k - 1], stroke_points[k], (0, 0, 255), 3)
+                        # for stroke_idx in range(len(bpoints)):
+                        #     if len(bpoints[stroke_idx]) >= 1:
+                        #         stroke_points = list(bpoints[stroke_idx])
+                        #         for k in range(1, len(stroke_points)):
+                        #             if stroke_points[k - 1] and stroke_points[k]:
+                        #                 cv2.line(Disp, stroke_points[k - 1], stroke_points[k], (0, 0, 255), 3)
                         cv2.namedWindow("Window", cv2.WINDOW_NORMAL)
                         cv2.imshow("Window", window)
                         cv2.resizeWindow("Window", windoww, windowh)
